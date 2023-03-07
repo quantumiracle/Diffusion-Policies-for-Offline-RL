@@ -44,7 +44,8 @@ def train_agent(env, state_dim, action_dim, max_action, device, output_dir, args
     utils.print_banner('Loaded buffer')
 
     if args.algo == 'ql':
-        from agents.ql_diffusion import Diffusion_QL as Agent
+        # from agents.ql_diffusion import Diffusion_QL as Agent
+        from agents.ql_consistency import Consistency_QL as Agent
         agent = Agent(state_dim=state_dim,
                       action_dim=action_dim,
                       max_action=max_action,
